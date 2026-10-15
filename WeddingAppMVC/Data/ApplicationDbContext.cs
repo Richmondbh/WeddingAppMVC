@@ -25,13 +25,9 @@ namespace WeddingAppMVC.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // MIGRATION STEP: this line keeps PhoneNumber out of the first migration.
-            // After running InitialCreate, delete this line and run
-            // Add-Migration AddPhoneNumber (see README, "Setting up the database").
-            modelBuilder.Entity<Guest>().Ignore(g => g.PhoneNumber);
+       
 
-            // Sample guests. Dates must be fixed values, never DateTime.Now,
-            // otherwise every new migration would try to update them.
+            // Sample guests.
             modelBuilder.Entity<Guest>().HasData(
                 new Guest
                 {

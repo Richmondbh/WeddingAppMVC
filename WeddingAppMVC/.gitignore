@@ -1,0 +1,11 @@
+﻿
+# Local History for Visual Studio
+.localhistory/
+
+
+# Fody - auto-generated XML schema
+FodyWeavers.xsd
+
+# SQLite database created by Update-Database
+Wedding.db
+
