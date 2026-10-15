@@ -1,11 +1,14 @@
-﻿
-# Local History for Visual Studio
-.localhistory/
+﻿# Visual Studio and build output
+.vs/
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
 
-
-# Fody - auto-generated XML schema
-FodyWeavers.xsd
-
-# SQLite database created by Update-Database
+# SQLite local database and temporary files
 Wedding.db
+Wedding.db-shm
+Wedding.db-wal
 
+# Local configuration that may contain secrets
+appsettings.Development.json
