@@ -104,6 +104,10 @@ namespace WeddingAppMVC.Migrations
                     b.Property<int>("NumberOfAttendants")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("PhoneNumber")
+                        .HasMaxLength(20)
+                        .HasColumnType("TEXT");
+
                     b.Property<DateTime>("RegisteredOn")
                         .HasColumnType("TEXT");
 
