@@ -19,10 +19,10 @@ namespace WeddingAppMVC.Controllers
             _context = context;
         }
 
-        // GET: /Guest?filter=attending&sort=name&search=anna
+        // GET: /filter, sorting and search
         public async Task<IActionResult> Index(string filter, string sort, string search)
         {
-            // Start with all guests and narrow the query step by step.
+            // Starts with all guests and narrow the query step by step.
             // Nothing is sent to the database until ToListAsync is called.
             IQueryable<Guest> query = _context.Guests;
 
@@ -153,7 +153,7 @@ namespace WeddingAppMVC.Controllers
 
         // POST: /Guest/Rsvp/5
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        [ValidateAntiForgeryToken]//against cross-site request forgery (CSRF)
         public async Task<IActionResult> Rsvp(int id, RsvpViewModel model)
         {
             if (id != model.Id)
@@ -180,7 +180,7 @@ namespace WeddingAppMVC.Controllers
                 return NotFound();
             }
 
-            // Update the existing record instead of creating a new one.
+            // Updates the existing record instead of creating a new one.
             guest.WillAttend = model.WillAttend;
             guest.NumberOfAttendants = model.WillAttend == true ? model.NumberOfAttendants : 0;
             guest.Message = model.Message;
@@ -258,7 +258,7 @@ namespace WeddingAppMVC.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        // GET: /Guest/Delete/5  (asks for confirmation)
+        // GET: /Guest/Delete/5  (asking  for confirmation)
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
