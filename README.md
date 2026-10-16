@@ -45,11 +45,11 @@ MVC. Coursework for Programming in C# III at Malmö University.
 
 | Home | Guest list |
 | --- | --- |
-| ![Home page with welcome text loaded from the database](docs/images/home.png) | ![Guest list with search, filter and sort](docs/images/guest.png) |
+| ![Home page with welcome text loaded from the database](WeddingAppMVC/docs/images/home.png) | ![Guest list with search, filter and sort](WeddingAppMVC/docs/images/guest.png) |
 
 | Admin dashboard |
 | --- |
-| ![Admin dashboard with RSVP statistics](docs/images/admin.png) |
+| ![Admin dashboard with RSVP statistics](WeddingAppMVC/docs/images/admin.png) |
 
 ## Project structure
 
